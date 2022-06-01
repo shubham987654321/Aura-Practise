@@ -1,0 +1,42 @@
+.THIS input {
+    color: rgb(130, 137, 238);
+    padding: 10px;
+    min-width: 50%;
+    margin-top: 10px;
+    border: 0px;
+    border-radius: 10px;
+    color: rgba(6, 17, 3, 0.78);
+    font-size: 15px;
+    box-shadow: 10px 10px 20px gray;
+}
+
+.THIS.button-crt,
+.THIS .button-crt {
+    border: 0px;
+    letter-spacing: 1px;
+    background-color: #ec0989;
+    width: auto;
+    height: 35px;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 15px;
+    color: white;
+    box-shadow: 10px 10px 2px lightgray;
+    animation: transform 1s;
+    outline: 0;
+    padding: 5px;
+}
+
+.THIS.button-crt:hover,
+.THIS .button-crt:hover {
+    background-color: #45ae53;
+    color: blue;
+}
+
+.THIS.button-crt:active {
+    transform: scale(1.05, 1.05);
+}
+
+.THIS .toggle1 {
+    display: hidden;
+}

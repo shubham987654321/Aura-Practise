@@ -1,0 +1,15 @@
+<aura:component>
+    <div>  
+        
+    <div class="white">Hello MTX</div>
+    <h2 class="mytitle">Welcome to MTX Trainings</h2>
+
+    <ol>
+        <li  class="red">This is red Color </li>
+        <li class="blue">This is blue Color </li>
+        <li class="green">This is green Color </li>
+    </ol>
+</div>
+
+
+</aura:component>

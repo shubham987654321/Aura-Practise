@@ -1,0 +1,8 @@
+<aura:component>
+<aura:attribute name="label" type="String" default="My Degfault value"/>
+<aura:attribute name="amount" type="Decimal" default="100000"/>
+
+<p>The Label Attribute value is : {!v.label}</p>
+<meter value="{!v.amount}"></meter>
+
+</aura:component>

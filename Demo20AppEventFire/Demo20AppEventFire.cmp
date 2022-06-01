@@ -1,0 +1,19 @@
+<aura:component>
+
+    <aura:attribute name="messageString" type="String"/>
+    <aura:registerEvent  name="appEventName" type="c:appevent"/>
+
+    <p>
+        <hr/>
+        Application  Event Demo
+        : Child Component : Event Fire Component Starts
+        <hr/>
+    </p>
+
+    <lightning:input type="String" name="input1" label="Enter the  message to be passed" value="{!v.messageString}"/><br/>
+   <lightning:button variant="brand" label="Fire Event/Send Message to Parent" title="Brand action" onclick="{! c.fireEvent}"/>
+
+   <br/>
+  
+
+</aura:component>	

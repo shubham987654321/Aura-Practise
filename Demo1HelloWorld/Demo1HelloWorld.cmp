@@ -1,0 +1,6 @@
+<aura:component>
+
+<h1><b>Hey Hello and Welcome to World of <i>Aura Copmonent</i></b></h1>
+<h1>This is First Aura Component by Shubham Kumar...</h1>
+
+</aura:component>

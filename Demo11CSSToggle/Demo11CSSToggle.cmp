@@ -1,0 +1,6 @@
+<aura:component>
+    <aura:attribute name="label" type="String" default="Hello Shubham"/>
+    <div aura:id="mytext">{!v.label}</div>
+    <lightning:button  label="Hide" title="Success" onclick="{! c.handleClick }" aura:id="mybutton"/>
+
+</aura:component>

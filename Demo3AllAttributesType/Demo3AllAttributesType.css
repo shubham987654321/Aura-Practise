@@ -1,0 +1,18 @@
+.THIS table{
+border: 1px solid greenyellow;
+cellpadding : 2px ;
+align:center;
+
+  
+}
+
+.THIS thead{
+    background-color: aqua;
+}
+.THIS body{
+    align: center;
+}
+
+.THIS tr, .THIS td, .THIS tbody{
+    border: 1px solid red;
+}

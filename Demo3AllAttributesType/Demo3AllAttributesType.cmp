@@ -1,0 +1,80 @@
+<aura:component>
+    <aura:attribute name="mystring" type="String" default="My Strig value"/>
+    <aura:attribute name = 'JsObject' type="Object" default=""/>
+    
+    <aura:attribute name = 'myAccount' type="Account" default="{'sobjectType': 'Account','Name':'Test Account','Active__c' :'Yes'}"/>
+
+    <aura:attribute name="myCollege" type="College__c" default="{'sobjectType':'College__c','Name':'Test College','isActive__c':true}"/>
+    <aura:attribute name="stringArray" type="String[]" default="['green','blue']"/>
+    <aura:attribute name="colorList" type="List" default="['cyan', 'pink','black', 'green']"/>
+    <aura:attribute name="colorSet" type="Set" default="['green','red','white']"/>
+    <aura:attribute name="colorMap" type="Map" default="{'key1':'green','key2':'cyan'}"/>
+    <aura:attribute name="myCustomType"  type="MyDemoWrapper"/>
+    
+    
+    
+    <!--Javascript-->
+    <aura:handler name="init" value="{!this}" action="{!c.jScript1}"/>
+     
+    
+    <div>
+        <table>
+        <thead>
+            <tr>
+            <th>Type</th>
+            <th>Attribute Name</th>
+            <th>Attribute Value</th>
+        </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td>Basic String</td>
+                <td>mystring</td>
+                <td>{!v.mystring}</td>
+            </tr>
+            <tr>
+                <td>Javascript Object</td>
+                <td>jsObject</td>
+                <td>{!v.JsObject.name} -- {!v.JsObject.email}</td>
+            </tr>
+
+            <tr>
+                <td>Standard Object</td>
+                <td>myAccount</td>
+                <td>{!v.myAccount.Name}-- {!v.myAccount.Active__c}</td>
+            </tr>
+
+            <tr>
+                <td>Custom Object</td>
+                <td>myCollege</td>
+                <td>{!v.myCollege.Name}-- {!v.myCollege.isActive__c}</td>
+            </tr>
+
+            <tr>
+                <td>String Array</td>
+                <td>stringArray</td>
+                <td>{!v.stringArray[0]}</td>
+            </tr>
+
+            <tr>
+                <td>List</td>
+                <td>colorList</td>
+                <td>{!v.colorList[0]}--{!v.colorList[1]}</td>
+            </tr>
+
+            <tr>
+                <th>Custom Data type</th>
+                <th>myCustomType</th>
+                <th>{!v.myCustomType.myname}--{!v.myCustomType.email}</th>
+            </tr>
+
+           
+ 
+        </tbody>
+        
+           
+       
+    </table>
+    </div>
+
+</aura:component>

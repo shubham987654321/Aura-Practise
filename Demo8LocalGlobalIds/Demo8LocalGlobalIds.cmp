@@ -1,0 +1,21 @@
+<aura:component>
+    <p>Local Id Demos</p>
+
+    <lightning:input name="input" label="Input Value" aura:id="demo1input"/>
+    <lightning:button variant="brand" label="Shows Ids" title="Brand action" onclick="{! c.handleClick }" aura:id="demo1button"/>
+     <br/><br/><br/><br/><br/><br/>
+
+     <p>Local Ids Demo 2 </p>
+     <aura:iteration items="1,2,3,4,5,6,7,8,9" var="item" indexVar="count">
+        <lightning:input name="input" label="Input Value" aura:id="demo2input" value="{!'My Value '+count}"/>
+     </aura:iteration>
+
+     <lightning:button variant="brand"  label="Shows Multiple Ids" title="Brand action" onclick="{!c.showMultipleIds }" />
+     <lightning:button variant="brand"  label="Reset" title="Brand action" onclick="{!c.resetValues }" />
+  
+     <br/><br/><br/><br/><br/><br/>
+
+
+
+
+</aura:component>

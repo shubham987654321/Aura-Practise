@@ -1,0 +1,12 @@
+<aura:component>
+    <aura:attribute name="header" type="Aura.Component[]"/>
+    <aura:attribute name="footer" type="Aura.Component[]"/>
+
+    <div>
+        <p>Header facet is : {!v.header}</p>
+        <p>footer facet is : {!v.footer}</p>
+        <p>Header facet is : {!v.header}</p>
+        <p>Body attribute is :{!v.body}</p>  <!--by default(body) it is  persent--> 
+    </div>
+
+</aura:component>

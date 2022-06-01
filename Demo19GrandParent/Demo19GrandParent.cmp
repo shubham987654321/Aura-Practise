@@ -1,0 +1,14 @@
+<aura:component>
+
+    <aura:attribute name="messageFromEvent" type="String"/>
+
+    <aura:handler name="cmpEventName" event="c:cmpevent" action="{!c.handleEvent}"/>
+
+    <hr/>
+    <br/> 
+
+    This is Grand Parent : {!v.messageFromEvent}
+    <c:Demo19CmpEventHandler/>
+
+
+</aura:component>	

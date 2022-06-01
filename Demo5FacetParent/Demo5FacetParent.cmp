@@ -1,0 +1,12 @@
+<aura:component extensible="true">
+    <br/><br/>
+    <pre>
+        This is Parent Component
+        ==========================
+        /\
+       /  \
+!!!!!!!!!!!!!!!!!!!!
+    </pre>
+    <!-- <p>{!v.body}</p> -->
+
+</aura:component>

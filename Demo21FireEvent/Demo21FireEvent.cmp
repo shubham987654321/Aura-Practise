@@ -1,0 +1,6 @@
+<aura:component>
+    <aura:registerEvent name="bubbleevent" type="c:cmpevent"/>
+    <lightning:button variant="brand" label="Fire Event" title="Brand action" onclick="{! c.fireEvent}"/>
+
+   
+</aura:component>	

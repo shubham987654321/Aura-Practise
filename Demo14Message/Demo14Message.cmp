@@ -1,0 +1,18 @@
+<aura:component>
+    <aura:method name="show" action="{!c.auraShowMessage}">
+        <aura:attribute name="message" type="String" default=""/>
+    </aura:method>
+
+    <aura:method name="error" action="{!c.auraShowErrorMessage}">
+        <aura:attribute name="message" type="String" default=""/>
+    </aura:method>
+
+    <aura:method name="remove" action="{!c.auraRemoveMessage}">
+        <aura:attribute name="message" type="String" default=""/>
+    </aura:method>
+
+   
+   
+    <div aura:id="messagediv"></div>
+
+</aura:component>	

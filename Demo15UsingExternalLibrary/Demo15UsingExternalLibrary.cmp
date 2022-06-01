@@ -1,0 +1,8 @@
+<aura:component>
+    <ltng:require
+        scripts="{!$Resource.chartjs}"
+        afterScriptsLoaded="{!c.scriptsLoaded}" />
+
+        
+        <canvas aura:id="myChart" width="400" height="400"></canvas>
+</aura:component>	

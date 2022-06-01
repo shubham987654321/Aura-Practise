@@ -1,0 +1,4 @@
+<aura:component implements="flexipage:availableForAllPageTypes">
+    <b>Date : 22/04/2022 (new Demo)</b>
+    <c:contactLocationMap listView="listView" />
+</aura:component>

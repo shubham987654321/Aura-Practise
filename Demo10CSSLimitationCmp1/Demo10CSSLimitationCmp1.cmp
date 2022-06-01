@@ -1,0 +1,15 @@
+<aura:component>
+	
+    <aura:attribute name="class" type="String"/>
+    <p class="{!v.class}">
+    	{!v.body}
+    </p>
+    
+    <button class="slds-button">Button</button>
+<button class="slds-button slds-button_neutral">Neutral Button</button>
+<button class="slds-button slds-button_brand">Brand Button</button>
+<button class="slds-button slds-button_outline-brand">Outline Brand Button</button>
+<button class="slds-button slds-button_destructive">Destructive Button</button>
+<button class="slds-button slds-button_text-destructive">Text Destructive Button</button>
+<button class="slds-button slds-button_success">Success Button</button>
+</aura:component>

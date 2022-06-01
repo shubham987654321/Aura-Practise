@@ -1,0 +1,74 @@
+<aura:component controller="Demo12CallingApexController">
+    <aura:attribute name="accountList" type="List"/>
+    <aura:attribute name="contactList" type="List"/>
+    <aura:attribute name="selectedAccountId" type="String" default="none"/>
+    <aura:attribute name="showSpinner" type="Boolean" default="false"/>
+    <aura:attribute name="isError" type="Boolean" default="false"/>
+    <aura:attribute name="errorMessage" type="String" default=""/>
+    <aura:handler name="init" value="{!this}" action="{!c.doInit}"/>
+    <aura:handler name="change" value="{!v.selectedAccountId}" action="{!c.getContactRecords}"/>
+    
+    
+    
+    <aura:if isTrue="{!v.showSpinner}">
+        <lightning:spinner alternativeText="Loading" size="large" />
+    </aura:if>
+    <lightning:select name="select1"
+    label="Select Account Records"
+    required="true"
+    value="{!v.selectedAccountId}">
+        <option value="none">choose one...</option>
+        <aura:iteration items="{!v.accountList}" var="item">
+            <option value="{!item.Id}">{!item.Name}</option>
+        </aura:iteration>
+    </lightning:select>
+  <!-- <aura:iteration items="{!v.contactList}" var="item">
+        {!item.Id} -{!item.Name} <br/>
+    </aura:iteration> -->
+
+
+ <aura:if isTrue="{!v.isError}">
+    <p><lightning:formattedText value="{!v.errorMessage}" /></p>
+    <aura:set attribute="else"> 
+ <aura:if isTrue="{!v.selectedAccountId != 'none'}">
+    <aura:if isTrue="{!v.contactList.length == 0}">
+        <br/><br/>NO CONTACT EXIST
+ <aura:set attribute="else">
+  
+ <div>
+    <table class="slds-table slds-table_cell-buffer slds-table_bordered"
+    aria-label="Example default base table of Opportunities">
+        <thead>
+        <tr class="slds-line-height_reset">
+        <th class="" scope="col">
+        <div class="slds-truncate" title="Account Id">ContactId</div>
+        </th>
+        <th class="" scope="col">
+        <div class="slds-truncate" title="Account Name">Contact Name</div>
+        </th>
+        </tr>
+        </thead>
+        <tbody>
+            <aura:iteration items="{!v.contactList}" var="item">
+                <tr class="slds-hint-parent">
+                    <th data-label="Contact Id" scope="row">
+                        <div class="slds-truncate" title="Cloudhub">
+                            <a href="{!'/'+item.Id}" tabindex="-1" target="_blank">{!item.Id}</a>
+                        </div>
+                    </th>
+                    <td data-label="Contact Name">
+                        <div class="slds-truncate" title="{!item.Name}">{!item.Name}</div>
+                    </td>
+                </tr>
+            </aura:iteration>
+        </tbody>
+    </table>
+</div>
+</aura:set>
+</aura:if>
+</aura:if>
+</aura:set>
+</aura:if>
+
+ 
+</aura:component>

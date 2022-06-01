@@ -1,0 +1,22 @@
+.THIS {
+    background-color: rgb(226, 24, 206);
+    
+}
+
+.THIS .white{
+    background-color: rgb(50, 241, 21);
+}
+
+.THIS .mytitle{
+    font-size: 30px;
+}
+
+.THIS .green{
+    background-color: green;
+}
+.THIS .red{
+    background-color: red;
+}
+.THIS .blue{
+    background-color: blue;
+}

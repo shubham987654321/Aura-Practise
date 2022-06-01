@@ -1,0 +1,39 @@
+<aura:component controller="TopperCollegeContoller">
+    <aura:attribute name="collegeList" type="List"/>
+    <aura:attribute name="toppername" type="String"/>
+    <aura:attribute name="selectedCollegeId" type="String" default="none"/>
+
+
+    <aura:attribute name="showSpinner" type="Boolean" default="false"/>
+    <aura:attribute name="isError" type="Boolean" default="false"/>
+    <aura:attribute name="errorMessage" type="String" default=""/>
+    <aura:handler name="init" value="{!this}" action="{!c.doInit}"/>
+    <aura:handler name="change" value="{!v.selectedCollegeId}" action="{!c.getTopperStudent}"/>
+    
+    
+    
+  
+    <lightning:select name="select1"
+    label="Select Account Records"
+    required="true"
+    value="{!v.selectedCollegeId}">
+        <option value="none">choose one...</option>
+        <aura:iteration items="{!v.collegeList}" var="item">
+            <option value="{!item.Id}">{!item.Name}</option>
+        </aura:iteration>
+    </lightning:select>
+
+    <h1>Topper Name ===> {!v.toppername}</h1>
+
+
+
+
+   
+ 
+
+
+
+
+
+
+</aura:component>	

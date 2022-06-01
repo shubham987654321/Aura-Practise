@@ -1,0 +1,67 @@
+<aura:component controller="Demo12CallingApexController">
+    <aura:attribute name="accountList" type="Account[]" />
+    <lightning:button variant="brand" class="btn1" label="Get Data" title="Brand action" onclick="{!c.handleClick }" aura:id="mybutton" />
+    <aura:attribute name="showSpinner" type="Boolean" default="false" />
+    <!--
+   <div>
+        <aura:iteration  items="{!v.accountList}"  var="item">
+            <p>{!item.Name} -   -   - {!item.Id}</p>
+        </aura:iteration>
+
+     </div>
+    -->
+
+    <!--Spinner-->
+    <aura:if isTrue="{!v.showSpinner}">
+        <lightning:spinner alternativeText="Loading" size="large" />
+    </aura:if>
+
+
+
+    <aura:if isTrue="{!v.accountList.length==0}">
+        Click Here for See the data
+        <aura:set attribute="else">
+            <div aura:id="mytext" class="table1">
+                <table class="slds-table slds-table_cell-buffer slds-table_bordered" aria-label="Example default base table of Opportunities">
+                    <thead>
+                        <tr class="slds-line-height_reset">
+                            <th class="" scope="col">
+                                <div class="slds-truncate" title="Account Id">Account Id</div>
+                            </th>
+                            <th class="" scope="col">
+                                <div class="slds-truncate" title="Account Name">Account Name</div>
+                            </th>
+                            <th class="" scope="col">
+                                <div class="slds-truncate" title="Active">Active</div>
+                            </th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <aura:iteration items="{!v.accountList}" var="item">
+                            <tr class="slds-hint-parent">
+                                <th data-label="Account Id" scope="row">
+                                    <div class="slds-truncate" title="Cloudhub">
+                                        <a href="{!'/'+item.Id}" tabindex="-1" target="_blank">{!item.Id}</a>
+                                    </div>
+                                </th>
+                                <td data-label="Account Name">
+                                    <div class="slds-truncate" title="{!item.Name}">{!item.Name}</div>
+                                </td>
+                                <td data-label="Active">
+                                    <div class="slds-truncate">{!item.Active__c}</div>
+                                </td>
+                            </tr>
+                        </aura:iteration>
+                    </tbody>
+                </table>
+            </div>
+        </aura:set>
+    </aura:if>
+
+
+
+
+
+
+
+</aura:component>

@@ -1,0 +1,39 @@
+<aura:component implements="force:appHostable,flexipage:availableForAllPageTypes,force:hasRecordId,force:hasSObjectName">
+    <aura:attribute name="sObjectName" type="String" />
+    <aura:attribute name="recordId" type="String" /> {!v.sObjectName} ---- {!v.recordId}
+    <!-- 
+    <lightning:recordViewForm recordId="{!v.recordId}" objectApiName="{!v.sObjectName}">
+        <div class="slds-box">
+            <lightning:outputField fieldName="Name" />
+            <lightning:outputField fieldName="OwnerId" />
+            <lightning:outputField fieldName="Active__c" />
+            <lightning:outputField fieldName="Industry" />
+            <lightning:outputField fieldName="Phone" />
+        </div>
+    </lightning:recordViewForm>
+
+    <br /><br /><br /><br /><br /><br /><br /><br />
+    <lightning:recordEditForm recordId="{!v.recordId}" objectApiName="{!v.sObjectName}" onsuccess="{!c.handleSuccess}" onsubmit="{!c.handleSubmit}" aura:id="myRecordForm">
+        <lightning:inputField fieldName="Name" />
+        <lightning:inputField fieldName="OwnerId" />
+        <lightning:inputField fieldName="Active__c" />
+        <lightning:inputField fieldName="Industry" />
+        <lightning:inputField fieldName="Phone" />
+        <lightning:button class="slds-m-top_small" variant="brand" type="submit" name="update" label="Update" />
+    </lightning:recordEditForm>
+
+ -->
+
+    <!-- 
+ <lightning:recordForm recordId="{!v.recordId}" objectApiName="{!v.sObjectName}" layoutType="Compact" mode="readonly" />
+
+  -->
+
+    <aura:attribute name="fields" type="String[]" default="['Name','Industry','Active__c','Phone']" />
+    <lightning:recordForm recordId="{!v.recordId}" objectApiName="{!v.sObjectName}" fields="{!v.fields}" columns="3" mode="edit" aura:id="myAuraRecordForm" onsubmit="{!c.handleRecordFormSubmit}" />
+
+
+
+
+
+</aura:component>

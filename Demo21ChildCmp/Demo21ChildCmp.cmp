@@ -1,0 +1,6 @@
+<aura:component>
+    <aura:handler name="bubbleevent" event="c:cmpevent" action="{!c.handleBubble}"/>
+    <aura:handler name="bubbleevent" event="c:cmpevent" action="{!c.handleCapture}" phase="capture"/>
+
+  <c:Demo21GrandChildCmp/>
+</aura:component>	

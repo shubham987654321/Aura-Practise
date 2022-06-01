@@ -1,0 +1,12 @@
+<aura:component  extends="c:Demo5FacetParent">
+    <br/>
+    <pre>
+        _______________________ **********_______________________
+        _________________________*******_________________________
+        ____________________________**____________________________
+    </pre>
+    <p>This is child Component</p>
+    <p>{!v.body}</p>
+    <p>This is the Child facet text</p>
+
+</aura:component>

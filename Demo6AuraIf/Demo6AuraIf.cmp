@@ -1,0 +1,16 @@
+<aura:component>
+    <aura:attribute name="truthy" type="Boolean" default="true"/>
+    <aura:attribute name="buttonlabel" type="String" default="show false"/>
+
+    <aura:if isTrue="{!v.truthy}">
+        True
+        <aura:set attribute="else">
+          False
+        </aura:set>
+      </aura:if> 
+
+
+      <!-- Success variant: Identifies a successful action -->
+    <lightning:button variant="success" label="{!v.buttonlabel}" title="Success" onclick="{! c.handleClick }"/>
+
+</aura:component>

@@ -1,0 +1,12 @@
+<aura:component>
+    <aura:attribute name="messageFromEvent" type="String" />
+
+    <aura:handler name="cmpEventName" event="c:cmpevent" action="{!c.handleEvent}" />
+
+    <hr/>
+    <br/> Message Passed From Child Component is (THis is Parent) : {!v.messageFromEvent}
+    <c:Demo19CmpEventFire/>
+    <c:Demo19CmpEventFireChild2/>
+
+
+</aura:component>
